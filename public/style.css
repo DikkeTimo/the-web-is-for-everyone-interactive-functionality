@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  width: 100%;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: end;
+  background-color: #5e92c6;
+  border-radius: 0 0 0.6rem 0.6rem;
+  height: 6.5rem;
+}
+
+aside {
+  background-color: rgb(184, 216, 244);
+  border-radius: 0 0 0.6rem 0;
+  width: 30%;
+}
+
+/* ---------------- */
+
+/* Main */
+
+main {
+  margin-top: 2%;
+}
+
+.teams-total {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.team-scored-left,
+.team-scored-right {
+  background-color: #c0caff;
+  width: 49%;
+  height: 18rem;
+}
+
+.team-scored-left {
+  border-radius: 0 0.6rem 0.6rem 0;
+}
+
+.team-scored-right {
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+table {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.green {
+  background-color: #23a823;
+}
+
+.red {
+  background-color: #d92323;
+  color: white;
+}
+
+/* ---------------- */
+
+/* Footer */
+
+footer {
+  background-color: #5e92c6;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem;
+  margin-top: 2%;
+  height: 100%;
+}
+
+.teamplayers-left,
+.players-scored,
+.teamplayers-right {
+  border-radius: 0.6rem;
+  border: solid white 2px;
+  width: 30%;
+  height: 20rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p {
+  text-align: center;
+}
+
+.players {
+  background-color: white;
+  width: 35%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.15rem;
+}
+
+/* ---------------- */

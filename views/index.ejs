@@ -1,0 +1,104 @@
+<%- include('./partials/head')%>
+<% let allPlayers = [...data1.team1Players, ...data1.team2Players] %>
+
+<header>
+  <div class="scored-points">
+    
+  </div>
+
+  <aside>
+    <button id="goal">Goals</button>
+    <button id="assist">Assists</button>
+    <button id="block">Blocks</button>
+    <button id="turnover">Turnovers</button>
+  </aside>
+</header>
+
+<main>
+  <div class="teams-total">
+    <div class="team-scored-left">
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Pass</th>
+            <th>Turn</th>
+            <th>O/D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%# Point item team 1 %>
+          <tr class="score-info-team-1">
+            <% data2.scoredPoints.forEach(point => { %>
+          </tr>
+          <tr class="score-info-team-1 <%= (point.scored===point.team1Name) ? 'green' : 'red' %>">
+            <td><%= point.team1Passes %></td>
+            <td><%= point.team1Turnovers %></td>
+            <td><%= point.team1OorD %></td>
+          </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="score-every-point"></div>
+    
+    <div class="team-scored-right">
+      <table cellspacing="0" cellpadding="0">
+        <thead>
+          <tr>
+            <th>Pass</th>
+            <th>Turn</th>
+            <th>O/D</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="score-info-team-2">
+            <% data2.scoredPoints.forEach(point => { %>
+          </tr>
+          <tr class="score-info-team-2 <%= (point.scored===point.team2Name) ? 'green' : 'red' %>">
+            <td><%= point.team2Passes %></td>
+            <td><%= point.team2Turnovers %></td>
+            <td><%= point.team2OorD %></td>
+          </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="teamplayers-left">
+    <% data1.team1Players.forEach(players => { %>
+      <button class="players">
+        <%= players.name %>
+        <%=players.jerseyNumber%>
+      </button>
+    <% }) %>
+  </div>
+  
+  <div class="players-scored">
+    <% data2.scoredPoints.forEach(scored => { %>
+      <% allPlayers.forEach(player => {%>
+        <% if(scored.scoredBy === player.playerId){ %>
+          <p><%= player.name %></p>
+        <% } %> 
+      <% }) %>
+    <% }) %>
+  
+  </div>
+  <div class="teamplayers-right">
+    <% data1.team2Players.forEach(players => { %>
+      <button class="players">
+        <%= players.name %>
+        <%=players.jerseyNumber%>
+      </button>
+    <% }) %>
+  </div>
+</footer>
+
+
+
+
+<%-include('./partials/foot') %>
