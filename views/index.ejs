@@ -2,8 +2,16 @@
 <% let allPlayers = [...data1.team1Players, ...data1.team2Players] %>
 
 <header>
-  <div class="scored-points">
-    
+  <div class="info-game">
+    <div class="flag-home-team">
+      <img src="./pics/icons8-netherlands-96.png" alt="">
+    </div>
+    <div class="scored-points">
+      <p><%=data2.team1Score %>-<%=data2.team2Score %></p>
+    </div>
+    <div class="flag-away-team">
+      <img src="./pics/icons8-australia-96.png" alt="">
+    </div>
   </div>
 
   <aside>
@@ -64,7 +72,6 @@
         </tbody>
       </table>
     </div>
-
   </div>
 </main>
 
