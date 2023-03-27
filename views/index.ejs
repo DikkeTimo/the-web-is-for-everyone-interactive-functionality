@@ -7,7 +7,7 @@
       <img src="./pics/icons8-netherlands-96.png" alt="">
     </div>
     <div class="scored-points">
-      <p><%=data2.team1Score %>-<%=data2.team2Score %></p>
+      <p><%=data2.team1Score %>-<%=data2.team2Score%></p>
     </div>
     <div class="flag-away-team">
       <img src="./pics/icons8-australia-96.png" alt="">
@@ -15,10 +15,25 @@
   </div>
 
   <aside>
-    <button id="goal">Goals</button>
-    <button id="assist">Assists</button>
-    <button id="block">Blocks</button>
-    <button id="turnover">Turnovers</button>
+    <div class="buttons">
+      <button id="goal">Goals</button>
+      <button id="assist">Assists</button>
+      <button id="block">Blocks</button>
+      <button id="turnover">Turnovers</button>
+      <!-- <button id="add-player">Add-players</button> -->
+      <a href="newPlayer">Form</a>
+    </div>
+
+    <div class="popup">
+      <form id="goal-input" action="" method="post">
+        <fieldset>Goal</fieldset>
+        <label for="goals">Team-A</label>
+        <input type="checkbox" name="prefix" id="prefix" placeholder="..." value="" />
+        <label for="goals">Team-B</label>
+        <input type="checkbox" name="prefix" id="prefix" placeholder="..." value="" />
+        <input type="submit" value="Submit">
+      </form>
+    </div>
   </aside>
 </header>
 
@@ -48,7 +63,11 @@
       </table>
     </div>
 
-    <div class="score-every-point"></div>
+    <div class="score-every-point">
+      <% data2.scoredPoints.forEach(points => { %>
+        <p><%= points.team1Score %>-<%= points.team2Score %></p>
+      <% }) %>
+    </div>
     
     <div class="team-scored-right">
       <table cellspacing="0" cellpadding="0">
@@ -104,8 +123,5 @@
     <% }) %>
   </div>
 </footer>
-
-
-
 
 <%-include('./partials/foot') %>

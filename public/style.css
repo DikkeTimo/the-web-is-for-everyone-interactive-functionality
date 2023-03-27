@@ -48,21 +48,61 @@ img {
   font-weight: 600;
 }
 
-
 aside {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  background-color: rgb(184, 216, 244);
+  background-color: #c0caff;
   border-radius: 0 0 0.6rem 0;
-  width: 30%;
+  width: 40%;
 }
 
 aside button {
   margin-left: 0.4rem;
   border: none;
-  width: 5rem;
+  width: 6rem;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#goal {
+  color: white;
+  background-color: #23a823;
+}
+
+#assist {
+  color: white;
+  background-color: blue;
+}
+
+#block {
+  color: white;
+  background-color: red;
+}
+
+#turnover {
+  background-color: yellow;
+}
+
+.popup {
+  visibility: hidden;
+  width: 50%;
+}
+
+.visibile {
+  visibility: visible;
+}
+
+/* .add-players {
+  width: 80%;
+}
+
+.add-visibile {
+  visibility: visible;
+} */
 
 /* ---------------- */
 
@@ -76,18 +116,32 @@ main {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
 
 .team-scored-left,
 .team-scored-right {
   background-color: #c0caff;
   width: 49%;
-  height: 18rem;
+  height: 100%;
+  padding-bottom: 1rem;
 }
 
 .team-scored-left {
   border-radius: 0 0.6rem 0.6rem 0;
 }
+
+/* .score-every-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #23a823;
+    color: white;
+    height: 100%;
+    width: 10%;
+    padding: 1.5%;
+  } */
 
 .team-scored-right {
   border-radius: 0.6rem 0 0 0.6rem;
@@ -127,7 +181,7 @@ footer {
   border-radius: 0.6rem;
   border: solid white 2px;
   width: 30%;
-  height: 20rem;
+  height: 100%;
   padding: 1rem;
   flex-wrap: wrap;
 }
@@ -151,7 +205,5 @@ footer p {
   transition: 0.3s;
   scale: 1.02;
 }
-
-
 
 /* ---------------- */
