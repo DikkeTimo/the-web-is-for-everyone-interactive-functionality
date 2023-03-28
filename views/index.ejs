@@ -21,7 +21,7 @@
       <button id="block">Blocks</button>
       <button id="turnover">Turnovers</button>
       <!-- <button id="add-player">Add-players</button> -->
-      <a href="newPlayer">Form</a>
+      <a href="newPlayer">Add newPlayer</a>
     </div>
 
     <div class="popup">
@@ -96,7 +96,7 @@
 
 <footer>
   <div class="teamplayers-left">
-    <% data1.team1Players.forEach(players => { %>
+    <% data4.players.forEach(players => { %>
       <button class="players">
         <%= players.name %>
         <%=players.jerseyNumber%>
@@ -115,7 +115,7 @@
   
   </div>
   <div class="teamplayers-right">
-    <% data1.team2Players.forEach(players => { %>
+    <% data4.players.forEach(players => { %>
       <button class="players">
         <%= players.name %>
         <%=players.jerseyNumber%>

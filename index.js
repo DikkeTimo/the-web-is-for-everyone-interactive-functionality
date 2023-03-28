@@ -39,7 +39,7 @@ app.get("/", async function (request, response) {
 app.get("/newPlayer", async function (request, response) {
   const [data1, data2, data3, data4, data5] = await Promise.all(urls.map(fetchJson));
   const data = { data1, data2, data3, data4, data5 };
-  response.render("form");
+  response.render("form", data);
 });
 
 app.post("/form", (request, response) => {
@@ -49,18 +49,17 @@ app.post("/form", (request, response) => {
       questionId: request.body.question,
     },
   ];
+
   postJson(postUrl, request.body).then((data) => {
     let newPlayer = { ...request.body };
 
-    console.log(newPlayer);
     if (data.success) {
       response.redirect("/?memberPosted=true");
-      response.render(data);
     } else {
       const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`;
       const newplayer = { error: errormessage, values: newPlayer };
-      response.render("form", data);
     }
+    response.redirect("/");
   });
 });
 
