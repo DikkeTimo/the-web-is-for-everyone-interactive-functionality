@@ -203,7 +203,33 @@ footer p {
 .players:focus,
 .players:hover {
   transition: 0.3s;
-  scale: 1.02;
+}
+
+.players-scored {
+  background-color: white;
 }
 
 /* ---------------- */
+
+/* Form */
+
+#post {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 2rem;
+}
+
+#post input {
+  padding: 0.5rem;
+}
+
+/* Breakpoint */
+
+@media (max-width: 400px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

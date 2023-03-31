@@ -64,9 +64,10 @@
     </div>
 
     <div class="score-every-point">
-      <% data2.scoredPoints.forEach(points => { %>
-        <p><%= points.team1Score %>-<%= points.team2Score %></p>
-      <% }) %>
+      <%  data2.scoredPoints.forEach(points => { %>
+        <p><%= /* points.team1Score %>-<%= points.team2Score  */%></p>
+      <% }) %> 
+
     </div>
     
     <div class="team-scored-right">
@@ -94,7 +95,7 @@
   </div>
 </main>
 
-<footer>
+<footer id="footer">
   <div class="teamplayers-left">
     <% data4.players.forEach(players => { %>
       <button class="players">
