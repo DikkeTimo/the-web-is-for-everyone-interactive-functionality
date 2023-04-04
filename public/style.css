@@ -19,9 +19,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #5e92c6;
+  background-color: #2978a0;
   border-radius: 0 0 0.6rem 0.6rem;
-  height: 6.5rem;
+  height: 10rem;
 }
 
 .info-game {
@@ -33,7 +33,7 @@ header {
 }
 
 img {
-  width: 3rem;
+  width: 4rem;
 }
 
 .scored-points {
@@ -59,6 +59,16 @@ aside {
 aside button {
   margin-left: 0.4rem;
   border: none;
+  width: 6rem;
+  height: 20px;
+}
+
+aside a {
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 0.4rem;
   width: 6rem;
 }
 
@@ -121,7 +131,8 @@ main {
 
 .team-scored-left,
 .team-scored-right {
-  background-color: #c0caff;
+  background-color: #463f1a;
+  color: white;
   width: 49%;
   height: 100%;
   padding-bottom: 1rem;
@@ -167,7 +178,7 @@ table {
 /* Footer */
 
 footer {
-  background-color: #5e92c6;
+  background-color: #463f1a;
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -240,10 +251,22 @@ footer p {
 
 /* Breakpoint */
 
-@media (max-width: 400px) {
-  footer {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+@media (max-width: 500px) {
+
+  .info-game {
+    width: 100%;
+  }
+
+  aside {
+    display: none;
+  }
+
+  .teamplayers-left,
+  .teamplayers-right {
+    display: none;
+  }
+
+  .players-scored {
+    width: 100%;
   }
 }
