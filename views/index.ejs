@@ -5,6 +5,7 @@
   <div class="info-game">
     <div class="flag-home-team">
       <img src="./pics/icons8-netherlands-96.png" alt="">
+      <%  %>
     </div>
     <div class="scored-points">
       <p><%=data2.team1Score %>-<%=data2.team2Score%></p>
@@ -109,10 +110,14 @@
     <% data2.scoredPoints.forEach(scored => { %>
       <% allPlayers.forEach(player => {%>
         <% if(scored.scoredBy === player.playerId){ %>
-          <p><%= player.name %></p>
+          <% if(scored.scored === scored.team1Name) { %>
+            <p><%= player.name %> <span><%= scored.team1Name %></span></p>
+          <% } else { %>
+            <p id="pretend-team"><%= player.name %> <span><%= scored.team2Name %></span></p>
+          <% } %>
         <% } %> 
       <% }) %>
-    <% }) %>
+    <%}) %>
   
   </div>
   <div class="teamplayers-right">

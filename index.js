@@ -7,7 +7,7 @@ const app = express();
 
 const url = ["https://raw.githubusercontent.com/fdnd-agency/ultitv/main/ultitv-api"];
 
-const postUrl = "https://api.ultitv.fdnd.nl/api/v1/players";
+const postUrl = "https://api.ultitv.fdnd.nl/api/v1/players?first=20";
 const apiUrl = "https://api.ultitv.fdnd.nl/api/v1/questions";
 
 const urls = [
@@ -16,6 +16,7 @@ const urls = [
   [url] + "/facts/Player/8607.json",
   [postUrl],
   [apiUrl],
+  /* Hier voeg ik alle endpoints samen onder urls */
 ];
 
 // Set EJS as the template engine and specify the views directory
@@ -29,8 +30,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", async function (request, response) {
+  /* Alle endpoints voeg ik samen in een variabele hier mee kan ik ze makkelijk alle data meegeven aan de response. */
+
   const [data1, data2, data3, data4, data5] = await Promise.all(urls.map(fetchJson));
+
+  /* Promis.all wacht op data pers stuk, eerst data1, data2 etc. */
+
   const data = { data1, data2, data3, data4, data5 };
+
+  /* Hier geef ik een variabele aan die ik kan gebruiken tijdens het renderen van mijn pagina. */
+
   response.render("index", data);
 });
 
@@ -46,11 +55,11 @@ app.post("/form", (request, response) => {
       content: request.body.content,
       questionId: request.body.question,
     },
+    /* Met request.body stuur je geparced json data naar de endpoint, in dit geval naar Posturl */
   ];
   postJson(postUrl, request.body).then((data) => {
     if (data.success) {
       response.redirect("/?memberPosted=true");
-    } else {
     }
     response.redirect("/");
   });
