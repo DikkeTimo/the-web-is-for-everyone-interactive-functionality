@@ -14,12 +14,19 @@ body {
   width: 100%;
 }
 
+:root {
+  --header-colour: #2978a0;
+  --light-colour: #fff;
+  --main-colour: #463f1a;
+  --score-colour: #23a823;
+}
+
 /* Header */
 
 header {
   display: flex;
   justify-content: space-between;
-  background-color: #2978a0;
+  background-color: var(--header-colour);
   border-radius: 0 0 0.6rem 0.6rem;
   height: 10rem;
 }
@@ -43,7 +50,7 @@ img {
 }
 
 .scored-points p {
-  color: #fff;
+  color: var(--light-colour);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -57,7 +64,7 @@ aside {
 }
 
 aside button {
-  margin-left: 0.4rem;
+  /* margin-left: 0.4rem; */
   border: none;
   width: 6rem;
   height: 20px;
@@ -65,10 +72,10 @@ aside button {
 
 aside a {
   background-color: black;
-  color: #fff;
+  color: var(--light-colour);
   text-decoration: none;
   text-align: center;
-  margin-left: 0.4rem;
+  /* margin-left: 0.4rem; */
   width: 6rem;
 }
 
@@ -79,17 +86,17 @@ aside a {
 }
 
 #goal {
-  color: white;
-  background-color: #23a823;
+  color: var(--light-colour);
+  background-color: var(--score-colour);
 }
 
 #assist {
-  color: white;
+  color: var(--light-colour);
   background-color: blue;
 }
 
 #block {
-  color: white;
+  color: var(--light-colour);
   background-color: red;
 }
 
@@ -99,7 +106,15 @@ aside a {
 
 .popup {
   visibility: hidden;
-  width: 50%;
+  font-size: 20px;
+  text-align: center;
+  width: 25%;
+  margin-top: 1rem;
+}
+
+#goal-input {
+  display: flex;
+  flex-direction: column;
 }
 
 .visibile {
@@ -131,8 +146,8 @@ main {
 
 .team-scored-left,
 .team-scored-right {
-  background-color: #463f1a;
-  color: white;
+  background-color: var(--main-colour);
+  color: var(--light-colour);
   width: 49%;
   height: 100%;
   padding-bottom: 2rem;
@@ -148,8 +163,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #23a823;
-    color: white;
+    background-color: var(--score-colour);
+    color: var(--light-colour);
     height: 100%;
     width: 10%;
     padding: 1.5%;
@@ -166,12 +181,12 @@ table {
 }
 
 .green {
-  background-color: #23a823;
+  background-color: var(--score-colour);
 }
 
 .red {
   background-color: #d92323;
-  color: white;
+  color: var(--light-colour);
 }
 
 /* ---------------- */
@@ -179,7 +194,7 @@ table {
 /* Footer */
 
 footer {
-  background-color: #463f1a;
+  background-color: var(--main-colour);
   display: flex;
   justify-content: space-around;
   padding: 2rem;
@@ -191,7 +206,7 @@ footer {
 .players-scored,
 .teamplayers-right {
   border-radius: 0.6rem;
-  border: solid white 2px;
+  border: solid var(--light-colour) 2px;
   width: 30%;
   height: 100%;
   padding: 1rem;
@@ -206,7 +221,7 @@ footer p {
 }
 
 .players {
-  background-color: white;
+  background-color: var(--light-colour);
   width: 49%;
   border: none;
   border-radius: 0.2rem;
@@ -220,18 +235,22 @@ footer p {
 }
 
 .players-scored {
-  background-color: white;
+  background-color: var(--light-colour);
+}
+.players-scored h3 {
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .players-scored span {
-  background-color: #23a823;
+  background-color: var(--score-colour);
   color: #fff;
   border-radius: 0.3rem;
   padding: 0.1rem;
 }
 
 #pretend-team span {
-  color: white;
+  color: var(--light-colour);
   background-color: #d92323;
 }
 
