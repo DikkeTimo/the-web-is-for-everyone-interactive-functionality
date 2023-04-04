@@ -135,7 +135,8 @@ main {
   color: white;
   width: 49%;
   height: 100%;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .team-scored-left {
@@ -252,7 +253,6 @@ footer p {
 /* Breakpoint */
 
 @media (max-width: 500px) {
-
   .info-game {
     width: 100%;
   }
