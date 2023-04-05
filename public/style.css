@@ -15,9 +15,10 @@ body {
 }
 
 :root {
-  --header-colour: #2978a0;
+  --header-colour: #f5e2c8;
   --light-colour: #fff;
-  --main-colour: #463f1a;
+  --dark-colour: #000000;
+  --main-colour: #34435e;
   --score-colour: #23a823;
 }
 
@@ -26,7 +27,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  background-color: var(--header-colour);
+  background-color: var(--main-colour);
   border-radius: 0 0 0.6rem 0.6rem;
   height: 10rem;
 }
@@ -50,7 +51,7 @@ img {
 }
 
 .scored-points p {
-  color: var(--light-colour);
+  color: white;
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -58,7 +59,7 @@ img {
 aside {
   display: flex;
   justify-content: space-around;
-  background-color: #c0caff;
+  background-color: var(--header-colour);
   border-radius: 0 0 0.6rem 0;
   width: 40%;
 }
@@ -218,6 +219,7 @@ footer p {
   justify-content: space-between;
   text-align: left;
   width: 100%;
+  margin-bottom: 0.1rem;
 }
 
 .players {

@@ -4,12 +4,12 @@
 
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
-## Inhoudsopgave
+## 📚 Inhoudsopgave
 
-- [Beschrijving](#beschrijving)
-- [Gebruik](#gebruik)
-- [Kenmerken](#kenmerken)
-- [Installatie](#installatie)
+- [👨🏼‍💼Beschrijving](#beschrijving)
+- [👩🏽‍💻Gebruik](#gebruik)
+- [📱Kenmerken](#kenmerken)
+- [🛠Installatie](#installatie)
 - [Bronnen](#bronnen)
 - [Licentie](#licentie)
 
