@@ -19,6 +19,8 @@
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+<img width="60%" src="/public/pics/screen.png">
+
 ## Gebruik
 
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
@@ -32,6 +34,8 @@ De pagina is gebouwd voor Ultitv, op het daschboard wordt de game info weergegev
 Voor dit project heb ik gebruik gemaakt van NodeJs met de pakkages express en ejs. De pagina is opgebouwd met html css. Ik heb veel gebruik gemaakt van flexbox voor deze pagina.
 
 Afhandeling van de post met javascript is een ticket voor de volgende sprint.
+
+Progressive Enhancement is een benadering voor het ontwerpen en ontwikkelen van websites en webapplicaties waarbij de focus ligt op het creëren van een solide basis van functionaliteit die werkt voor alle gebruikers, ongeacht hun apparaat, browser of verbindingssnelheid.
 
 ## Installatie
 
