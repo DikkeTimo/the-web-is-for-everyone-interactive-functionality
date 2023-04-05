@@ -23,6 +23,8 @@
 
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
+De pagina is gebouwd voor Ultitv, op het daschboard wordt de game info weergegeven van de desbetreffende wedstrijd. Commentators van Ultitv kunnen commentaar geven tijdens de wedstrijd doormiddel van de game stats.
+
 ## Kenmerken
 
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
@@ -35,7 +37,7 @@ Afhandeling van de post met javascript is een ticket voor de volgende sprint.
 
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 
-Om dit project te gebruiken kun je dit forken en openen met vs code, in de terminal `npm innit` en `npm install`, `express` en `ejs`. In de pakkage json bij scripts moet een ` "start": "node index.js"`
+Om dit project te gebruiken kun je dit forken en openen met vs code, in de terminal `npm innit` en `npm install`, `express` en `ejs`. In de pakkage json bij scripts moet een ` "start": "node index.js"` staan
 
 ## Bronnen
 
