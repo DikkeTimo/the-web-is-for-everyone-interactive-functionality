@@ -13,6 +13,4 @@ let formAdd = document.querySelector("add-players");
 //   formAdd.classList.toggle("add-visibile");
 // });
 
-// setTimeout("window.location.reload();", 10000);
-
-
+setTimeout("window.location.reload();", 10000);

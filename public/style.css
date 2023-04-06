@@ -135,7 +135,7 @@ aside a {
 /* Main */
 
 main {
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .teams-total {
@@ -199,7 +199,7 @@ footer {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  margin-top: 2%;
+  margin-top: 1%;
   height: 100%;
 }
 
@@ -225,6 +225,7 @@ footer p {
 .players {
   background-color: var(--light-colour);
   width: 49%;
+  height: 100%;
   border: none;
   border-radius: 0.2rem;
   padding: 0.5rem;
@@ -233,6 +234,7 @@ footer p {
 
 .players:focus,
 .players:hover {
+  scale: 1.02;
   transition: 0.3s;
 }
 
