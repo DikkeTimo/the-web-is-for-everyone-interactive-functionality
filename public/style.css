@@ -44,6 +44,10 @@ img {
   width: 4rem;
 }
 
+#logo {
+  width: 3rem;
+}
+
 .scored-points {
   display: flex;
   align-items: center;
